@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8F359DC-8913-4399-88DA-24831029A912}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{B26B734A-6887-4B25-95C6-E46759F9EDA6}"
+	ProjectSection(SolutionItems) = preProject
+		Controllers\colorMixerController.js = Controllers\colorMixerController.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Css", "Css", "{4FB03A0B-E51F-4128-AA0F-1B2F8F68B30F}"
+	ProjectSection(SolutionItems) = preProject
+		Css\painterStyles.css = Css\painterStyles.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B26B734A-6887-4B25-95C6-E46759F9EDA6} = {D8F359DC-8913-4399-88DA-24831029A912}
+		{4FB03A0B-E51F-4128-AA0F-1B2F8F68B30F} = {D8F359DC-8913-4399-88DA-24831029A912}
+	EndGlobalSection
+EndGlobal

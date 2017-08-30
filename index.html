@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJsPainter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+    <link rel="stylesheet" href="./Css/painterStyles.css">
+</head>
+<body>
+
+    <div ng-app="ColorMixerApp">
+        <div ng-controller="ColorMixerController" >                            
+                      
+            <form name="frmPaint">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th ng-repeat="a in Headers">{{a}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>                            
+                            <td><input type="number" ng-model="R_Value" min="0" max="254" ng-keyup="handleKey($event,'R')" /></td>
+                            <td><input type="number" ng-model="G_Value" min="0" max="254" ng-keyup="handleKey($event,'G')" /></td>
+                            <td><input type="number" ng-model="B_Value" min="0" max="254" ng-keyup="handleKey($event,'B')" /></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                    
+                <div>
+                    Selected Color: 
+                    <span ng-style="PalleteStyle()">
+                        RGB({{R_Value}},{{G_Value}},{{B_Value}})
+                    </span>
+                </div>
+                
+                <!--<button ng-click="ApplyColor()">Apply</button>-->
+                
+                <div class="canvas-container" ng-show="frmPaint.$valid">
+                    <div>Drawing Canvas</div>
+                    <canvas  id="paintArea" width="800" height="480" style="border-color:black;border-style:solid" ng-mousedown="canvasStart($event)" ng-mousemove="canvasDraw($event)" ng-mouseup="canvasEnd($event)">                       
+                    </canvas>
+                </div>
+                <span ng-show="!frmPaint.$valid">Invalid values for RGB</span>
+            </form>
+
+              
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>    
+    <script src="./Controllers/colorMixerController.js"></script>
+</body>
+</html>
+
+
